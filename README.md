@@ -1,0 +1,1 @@
+# stockapp_django

@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+
+{% block content %}
+ <h1> Welcome - Shivoham Shivoham!</h1>
+
+{% if api %}:
+   {% if api == 'error'%}
+        <h1> something bad happen with API</h1>
+    {% else %}
+       <h1>Company:  {{api.companyName }}</h1> </br>
+        Price: {{api.currency}} </br>
+        Latest Price: {{api.latestPrice }} </br>
+        Previous Close: {{api.previousClose}} </br>
+        Market Cap:  {{api.marketCap }} </br>
+        YTD Change: {{api.ytdChange }} </br>
+
+   {% endif %}
+{% endif %}
+{% endblock %}
+
+
